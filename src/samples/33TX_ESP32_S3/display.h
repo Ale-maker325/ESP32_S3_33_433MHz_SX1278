@@ -55,7 +55,9 @@ void displayInit()
   delay(2000);
   display.clearDisplay();
 
-  
+  Serial.println("");
+  Serial.println(F("*************************** Display end init - GOOD) ****************************"));
+  Serial.println("");
   
 }
 

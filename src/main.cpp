@@ -39,16 +39,15 @@ void setup() {
         Serial.println(" ");
     #endif
 
-    //инициализируем дисплей
-    displayInit();
-    
-
     #ifdef DEBUG_PRINT
         Serial.print(TABLE_LEFT);
         Serial.print(F("DISPLAY INIT"));
         Serial.println(TABLE_RIGHT);
         Serial.println(SPACE);
     #endif
+
+    //инициализируем дисплей
+    displayInit();
 
     pinMode(FUN, OUTPUT);                   //Контакт управления вентилятором охлаждения
     
