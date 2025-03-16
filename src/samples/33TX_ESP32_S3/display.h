@@ -54,6 +54,8 @@ void displayInit()
   display.display();
   delay(2000);
   display.clearDisplay();
+
+  
   
 }
 

@@ -101,27 +101,17 @@ String RADIO_1_NAME = F("RX_1");
 
 
 
-/**
- * @brief Пины SPI управления модемами 
- * По-умолчанию выбран SPI - VSPI: 
- * _________________________________________________________________________
- *    СПИ	    *      МОСИ	    *      МИСО	    *     СКЛК	    *      КС     *
- *__________________________________________________________________________
- *    VSPI	  *    GPIO 23	  *    GPIO 19	  *    GPIO 18	  *    GPIO5    *
- * ___________*_______________*_______________*_______________*_____________*
- *    HSPI	  *    GPIO 13	  *    GPIO 12	  *    GPIO 14	  *    GPIO 15  *
- * ___________*_______________*_______________*_______________*_____________*
- */
+
 #ifndef MOSI_RADIO
-  #define MOSI_RADIO 9
+  #define MOSI_RADIO -1
 #endif
 
 #ifndef MISO_RADIO
-  #define MISO_RADIO 11
+  #define MISO_RADIO -1
 #endif
 
 #ifndef SCK_RADIO
-  #define SCK_RADIO 8
+  #define SCK_RADIO -1
 #endif
 
 
