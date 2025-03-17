@@ -50,80 +50,80 @@ String RADIO_1_NAME = F("RX_1");
 
 
 
-/**
- * @brief Пины I2C
- * 
- */
-#ifndef I2C_SDA_PIN
-  #define I2C_SDA_PIN -1
-#endif
+// /**
+//  * @brief Пины I2C
+//  * 
+//  */
+// #ifndef I2C_SDA_PIN
+//   #define I2C_SDA_PIN -1
+// #endif
 
-#ifndef I2C_SCL_PIN
-  #define I2C_SCL_PIN -1
-#endif
-
-
-// _______________________ Пин вентилятора (если такой нужен) _______________________
-#ifndef FUN
-  #define FUN -1
-#endif
-
-// _______________________ Пин пользовательского светодиода _______________________
-#ifndef LED_PIN
-  #define LED_PIN -1
-#endif
+// #ifndef I2C_SCL_PIN
+//   #define I2C_SCL_PIN -1
+// #endif
 
 
-// _______________________ Пины модема номер 1 _______________________
-#ifndef NSS_PIN_1
-  #define NSS_PIN_1 -1
-#endif
+// // _______________________ Пин вентилятора (если такой нужен) _______________________
+// #ifndef FUN
+//   #define FUN -1
+// #endif
 
-#ifndef IRQ_PIN_1
-  #define IRQ_PIN_1 -1
-#endif
-
-#ifndef NRST_PIN_1
-  #define NRST_PIN_1 -1
-#endif
-
-#ifndef BUSY_PIN_1
-  #define BUSY_PIN_1 -1
-#endif
-
-#ifndef TX_EN_PIN_1
-  #define TX_EN_PIN_1 -1
-#endif
-
-#ifndef RX_EN_PIN_1
-  #define RX_EN_PIN_1 -1
-#endif
+// // _______________________ Пин пользовательского светодиода _______________________
+// #ifndef LED_PIN
+//   #define LED_PIN -1
+// #endif
 
 
+// // _______________________ Пины модема _______________________
+// #ifndef NSS_PIN_1
+//   #define NSS_PIN_1 -1
+// #endif
 
+// #ifndef IRQ_PIN_1
+//   #define IRQ_PIN_1 -1
+// #endif
 
-#ifndef MOSI_RADIO
-  #define MOSI_RADIO -1
-#endif
+// #ifndef NRST_PIN_1
+//   #define NRST_PIN_1 -1
+// #endif
 
-#ifndef MISO_RADIO
-  #define MISO_RADIO -1
-#endif
+// #ifndef BUSY_PIN_1
+//   #define BUSY_PIN_1 -1
+// #endif
 
-#ifndef SCK_RADIO
-  #define SCK_RADIO -1
-#endif
+// #ifndef TX_EN_PIN_1
+//   #define TX_EN_PIN_1 -1
+// #endif
+
+// #ifndef RX_EN_PIN_1
+//   #define RX_EN_PIN_1 -1
+// #endif
 
 
 
 
-// _______________________ Пины .................... _______________________
+// #ifndef MOSI_RADIO
+//   #define MOSI_RADIO -1
+// #endif
 
-#ifndef UNDEF_PIN
-  #define UNDEF_PIN -1
-#endif
+// #ifndef MISO_RADIO
+//   #define MISO_RADIO -1
+// #endif
 
-#ifndef xx
-  #define xx -1
-#endif
+// #ifndef SCK_RADIO
+//   #define SCK_RADIO -1
+// #endif
+
+
+
+
+// // _______________________ Пины .................... _______________________
+
+// #ifndef UNDEF_PIN
+//   #define UNDEF_PIN -1
+// #endif
+
+// #ifndef xx
+//   #define xx -1
+// #endif
 
