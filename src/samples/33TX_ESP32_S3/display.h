@@ -47,9 +47,9 @@ void displayInit()
   //Очищаем буффер дисплея
   display.clearDisplay();
 
-  // display.setTextSize(1);                 // Normal 1:1 pixel scale
-  // display.setTextColor(SSD1306_WHITE);    // Draw white text
-  // display.cp437(true);                    // Use full 256 char 'Code Page 437' font
+  display.setTextSize(1);                 // Normal 1:1 pixel scale
+  display.setTextColor(SSD1306_WHITE);    // Draw white text
+  display.cp437(true);                    // Use full 256 char 'Code Page 437' font
 
   display.setCursor(20, 5);
   display.print(F("DISPLAY INIT"));
