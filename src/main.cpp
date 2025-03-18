@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <settings.h>
 #include <rgb_led.h>
-#include <radioLR.h>
+// #include <radioLR.h>
 #include <display.h>
 
 
@@ -25,6 +25,7 @@ void setup() {
     #endif
 
     SPI_MODEM.begin(SCK_RADIO, MISO_RADIO, MOSI_RADIO);
+    display_wire.begin(I2C_SDA_PIN, I2C_SCL_PIN, 100000);
 
     #ifdef DEBUG_PRINT
         Serial.println(" ");
