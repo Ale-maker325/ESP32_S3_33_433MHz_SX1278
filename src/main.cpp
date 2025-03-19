@@ -12,6 +12,52 @@ boolean FUN_IS_ON = false;    //Логический флаг включения
 
 
 
+void setup_pin_led()
+{
+    pinMode(PIN_1, INPUT);
+    pinMode(PIN_2, INPUT);
+    pinMode(PIN_3, INPUT);
+    pinMode(PIN_4, INPUT);
+    pinMode(PIN_5, INPUT);
+    pinMode(PIN_6, INPUT);
+    pinMode(PIN_7, INPUT);
+    
+}
+
+
+void led_test()
+{
+    Serial.println("");
+    Serial.println("****************************************  LED TEST ON  ***********************************");
+    Serial.println("");
+
+    int temp = 20;
+
+    delay(temp);
+    digitalWrite(PIN_1, LOW);
+    delay(temp);
+    digitalWrite(PIN_1, HIGH);
+    digitalWrite(PIN_2, LOW);
+    delay(temp);
+    digitalWrite(PIN_2, HIGH);
+    digitalWrite(PIN_3, LOW);
+    delay(temp);
+    digitalWrite(PIN_3, HIGH);
+    digitalWrite(PIN_4, LOW);
+    delay(temp);
+    digitalWrite(PIN_4, HIGH);
+    digitalWrite(PIN_5, LOW);
+    delay(temp);
+    digitalWrite(PIN_5, HIGH);
+    digitalWrite(PIN_6, LOW);
+    delay(temp);
+    digitalWrite(PIN_6, HIGH);
+    digitalWrite(PIN_7, LOW);
+    delay(temp);
+    digitalWrite(PIN_7, HIGH);
+    
+}
+
 
 
 
@@ -26,6 +72,8 @@ void setup() {
 
     SPI_MODEM.begin(SCK_RADIO, MISO_RADIO, MOSI_RADIO);
     display_wire.begin(I2C_SDA_PIN, I2C_SCL_PIN, 100000);
+
+    setup_pin_led();
 
     #ifdef DEBUG_PRINT
         Serial.println(" ");
@@ -115,6 +163,7 @@ void setup() {
 void loop() {
     delay(500);
     WriteColorPixel(COLORS_RGB_LED::black);
+    led_test();
     
     #ifdef TRANSMITTER   //Если определен как передатчик проверяем, была ли предыдущая передача успешной
         
