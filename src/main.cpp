@@ -14,13 +14,13 @@ boolean FUN_IS_ON = false;    //Логический флаг включения
 
 void setup_pin_led()
 {
-    pinMode(PIN_1, INPUT);
-    pinMode(PIN_2, INPUT);
-    pinMode(PIN_3, INPUT);
-    pinMode(PIN_4, INPUT);
-    pinMode(PIN_5, INPUT);
-    pinMode(PIN_6, INPUT);
-    pinMode(PIN_7, INPUT);
+    pinMode(PIN_1, OUTPUT);
+    pinMode(PIN_2, OUTPUT);
+    pinMode(PIN_3, OUTPUT);
+    pinMode(PIN_4, OUTPUT);
+    pinMode(PIN_5, OUTPUT);
+    pinMode(PIN_6, OUTPUT);
+    pinMode(PIN_7, OUTPUT);
     
 }
 
@@ -31,7 +31,7 @@ void led_test()
     Serial.println("****************************************  LED TEST ON  ***********************************");
     Serial.println("");
 
-    int temp = 20;
+    int temp = 500;
 
     delay(temp);
     digitalWrite(PIN_1, LOW);
@@ -133,7 +133,7 @@ void setup() {
         WriteColorPixel(COLORS_RGB_LED::green);
 
         // и вентилятор охлаждения не включен, то включаем вентилятор охлаждения
-        if(config_radio1.outputPower > 10 && FUN_IS_ON != true)
+        if(config_radio1.outputPower > 1 && FUN_IS_ON != true)
         {
             //отмечаем вентилятор как включенный
             FUN_IS_ON = true;
