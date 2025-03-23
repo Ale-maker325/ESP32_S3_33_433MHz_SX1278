@@ -33,29 +33,35 @@ void led_test()
 
     int temp = 500;
 
-    delay(temp);
     digitalWrite(PIN_1, LOW);
     delay(temp);
-    digitalWrite(PIN_1, HIGH);
+    
     digitalWrite(PIN_2, LOW);
     delay(temp);
-    digitalWrite(PIN_2, HIGH);
+    
     digitalWrite(PIN_3, LOW);
     delay(temp);
-    digitalWrite(PIN_3, HIGH);
+    
     digitalWrite(PIN_4, LOW);
     delay(temp);
-    digitalWrite(PIN_4, HIGH);
+    
     digitalWrite(PIN_5, LOW);
     delay(temp);
-    digitalWrite(PIN_5, HIGH);
+    
     digitalWrite(PIN_6, LOW);
     delay(temp);
-    digitalWrite(PIN_6, HIGH);
+    
     digitalWrite(PIN_7, LOW);
     delay(temp);
-    digitalWrite(PIN_7, HIGH);
     
+    digitalWrite(PIN_1, HIGH);
+    digitalWrite(PIN_2, HIGH);
+    digitalWrite(PIN_3, HIGH);
+    digitalWrite(PIN_4, HIGH);
+    digitalWrite(PIN_5, HIGH);
+    digitalWrite(PIN_6, HIGH);
+    digitalWrite(PIN_7, HIGH);
+    delay(temp);
 }
 
 
