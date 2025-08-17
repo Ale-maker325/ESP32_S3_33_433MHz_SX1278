@@ -10,9 +10,9 @@
 - ✅ Совместимость с ExpressLRS
 - ✅ Пример передачи данных по LoRa
 
-## 📷 Фото устройства
+## 📷 Фото устройстваhttps:
 
-<img src="https://raw.githubusercontent.com/Ale-maker325/FOTO/1742917684166.jpg" width="900"/>
+<img src="https://raw.githubusercontent.com/Ale-maker325/ESP32_S3_33_433MHz_SX1278/FOTO/1742917684166.jpg" width="900"/>
 
 ## 🛠️ Быстрый старт
 
