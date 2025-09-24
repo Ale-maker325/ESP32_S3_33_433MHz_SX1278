@@ -1,8 +1,4 @@
-//*************************************************    LED   ****************************************************/
-
-//#define LED_PIN 21          // Пін LED E32-400M33S-S3-ZERO board
-//#define LED_STATE_ON 1      // Стан при включенні LED
-
+//*************************************************  RGB NEOPIXEL   ****************************************************/
 // Board has RGB LED 21
 #define ENABLE_AMBIENTLIGHTING
 //#define HAS_RGB_LED                          // Enable the use of RGB LED
@@ -10,8 +6,8 @@
 #define NEOPIXEL_COUNT 1                     // How many neopixels are connected
 #define NEOPIXEL_DATA 21                     // gpio pin used to send data to the neopixels
 #define NEOPIXEL_TYPE (NEO_RGB + NEO_KHZ800) // type of neopixels in use
-
 //************************************************  END LED  ***************************************************/
+
 
 
 //*************************************************   OLED   ****************************************************/
@@ -21,23 +17,23 @@
 // #define USE_SH1106 1
 #define I2C_SCL 13
 #define I2C_SDA 12
-
 //***********************************************   END OLED  ***************************************************/
+
 
 
 //*************************************************   I2C2   ****************************************************/
 // Другий I2C для підключення зовнішніх пристроїв
 #define I2C_SDA1 17
 #define I2C_SCL1 18
-
 //*************************************************  END I2C2  ***************************************************/
+
 
 
 //*************************************************   GPS   ******************************************************/
 /*
   No GPS - but free pins are available.
 */
-#define HAS_GPS 0
+#define HAS_GPS 1
 #undef GPS_RX_PIN
 #undef GPS_TX_PIN
 
@@ -45,7 +41,7 @@
 
 //*************************************************   BUTTON   ****************************************************/
 // Пін кнопки
-#define BUTTON_PIN 0    
+#define BUTTON_PIN 0   
 #define BUTTON_NEED_PULLUP
 //#define BUTTON_ACTIVE_LOW true
 //#define BUTTON_ACTIVE_PULLUP true
