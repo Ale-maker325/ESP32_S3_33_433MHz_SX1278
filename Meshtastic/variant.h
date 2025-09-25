@@ -33,7 +33,7 @@
 /*
   No GPS - but free pins are available.
 */
-#define HAS_GPS 1
+#define HAS_GPS 0
 #undef GPS_RX_PIN
 #undef GPS_TX_PIN
 
