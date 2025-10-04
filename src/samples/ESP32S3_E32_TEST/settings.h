@@ -6,7 +6,7 @@
 
 #define DEBUG_PRINT
 
-//#define LED_TEST
+#define LED_TEST
 
 /**
  * @brief Следует раскомментировать одно из определений, а другое закомментировать.
@@ -34,7 +34,7 @@
 #define RADIO_1_SPREAD_FACTOR 9
 #define RADIO_1_CODING_RATE 7
 #define RADIO_1_SYNC_WORD RADIOLIB_LR11X0_LORA_SYNC_WORD_PRIVATE
-#define RADIO_1_OUTPUT_POWER 20
+#define RADIO_1_OUTPUT_POWER 9
 #define RADIO_1_CURRENT_LIMIT 320
 #define RADIO_1_PREAMBLE_LENGTH 8
 #define RADIO_1_GAIN 0
@@ -58,11 +58,11 @@ String RADIO_1_NAME = F("RX_1");
  * 
  */
 #ifndef I2C_SDA_PIN
-  #define I2C_SDA_PIN -1
+  #define I2C_SDA_PIN 12
 #endif
 
 #ifndef I2C_SCL_PIN
-  #define I2C_SCL_PIN -1
+  #define I2C_SCL_PIN 13
 #endif
 
 

@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <settings.h>
 #include <rgb_led.h>
-// #include <radioLR.h>
+#include <radioLR.h>
 #include <display.h>
 
 
@@ -21,7 +21,6 @@ void setup_pin_led()
     pinMode(PIN_5, OUTPUT);
     pinMode(PIN_6, OUTPUT);
     pinMode(PIN_7, OUTPUT);
-    
 }
 
 
@@ -31,37 +30,60 @@ void led_test()
     Serial.println("****************************************  LED TEST ON  ***********************************");
     Serial.println("");
 
-    int temp = 500;
+    int temp = 350;
 
+    WriteColorPixel(COLORS_RGB_LED::red);
+    
+    delay(temp);
+    Serial1.println("--------------------------------  PIN 1  -----------------------------------");
     digitalWrite(PIN_1, LOW);
     delay(temp);
-    
+    digitalWrite(PIN_1, HIGH);
+
+    WriteColorPixel(COLORS_RGB_LED::green);
+
+    Serial1.println("--------------------------------  PIN 2  -----------------------------------");
     digitalWrite(PIN_2, LOW);
     delay(temp);
+    digitalWrite(PIN_2, HIGH);
+
+    WriteColorPixel(COLORS_RGB_LED::blue);
     
+    Serial1.println("--------------------------------  PIN 3  -----------------------------------");
     digitalWrite(PIN_3, LOW);
     delay(temp);
+    digitalWrite(PIN_3, HIGH);
+
+    WriteColorPixel(COLORS_RGB_LED::red);
     
+    Serial1.println("--------------------------------  PIN 4  -----------------------------------");
     digitalWrite(PIN_4, LOW);
     delay(temp);
+    digitalWrite(PIN_4, HIGH);
+
+    WriteColorPixel(COLORS_RGB_LED::green);
     
+    Serial1.println("--------------------------------  PIN 5  -----------------------------------");
     digitalWrite(PIN_5, LOW);
     delay(temp);
+    digitalWrite(PIN_5, HIGH);
+
+    WriteColorPixel(COLORS_RGB_LED::blue);
     
+    Serial1.println("--------------------------------  PIN 6  -----------------------------------");
     digitalWrite(PIN_6, LOW);
     delay(temp);
+    digitalWrite(PIN_6, HIGH);
+
+    WriteColorPixel(COLORS_RGB_LED::red);
     
+    Serial1.println("--------------------------------  PIN 7  -----------------------------------");
     digitalWrite(PIN_7, LOW);
     delay(temp);
-    
-    digitalWrite(PIN_1, HIGH);
-    digitalWrite(PIN_2, HIGH);
-    digitalWrite(PIN_3, HIGH);
-    digitalWrite(PIN_4, HIGH);
-    digitalWrite(PIN_5, HIGH);
-    digitalWrite(PIN_6, HIGH);
     digitalWrite(PIN_7, HIGH);
-    delay(temp);
+
+    Serial1.println("--------------------------------  LED TEST OFF  -----------------------------------");
+    WriteColorPixel(COLORS_RGB_LED::black);
 }
 
 
