@@ -7,6 +7,8 @@
 #define DEBUG_PRINT
 
 #define LED_TEST
+#define SIMPLE_LED
+
 
 /**
  * @brief Следует раскомментировать одно из определений, а другое закомментировать.

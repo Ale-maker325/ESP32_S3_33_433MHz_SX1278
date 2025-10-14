@@ -111,6 +111,7 @@ void (*print_to_terminal)(String &RadioName, String state) = print_to_terminal_r
  */
 void displayPrintState(int16_t x, int16_t y, String &RadioName, String state)
 {
+  display.clearDisplay();
   String str = RadioName + " : " + state;
   display.setCursor(x, y);
   display.print(str);
@@ -157,9 +158,9 @@ void printStateResultTX(int &state, String &transmit_str, Radio_Number radioNumb
       print_to_terminal_radio_state(RADIO_NAME, F("SEND PACKET"));
       print_to_terminal_radio_state(RADIO_NAME, F("TRANSMITT SUCCES!"));
     #endif
-    #ifndef LED_TEST
+    //#ifndef LED_TEST
       displayPrintState(x, y, RADIO_NAME, transmit_str);
-    #endif
+    //#endif
 
     #ifdef DEBUG_PRINT              
       //Выводим в сериал данные отправленного пакета
@@ -179,9 +180,9 @@ void printStateResultTX(int &state, String &transmit_str, Radio_Number radioNumb
     print_to_terminal_radio_state(RADIO_NAME, str);
     #endif
 
-    #ifndef LED_TEST
+    //#ifndef LED_TEST
       displayPrintState(x, y, RADIO_NAME, str);
-    #endif
+    //#endif
   
   }
   

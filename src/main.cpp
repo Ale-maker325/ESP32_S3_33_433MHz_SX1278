@@ -149,6 +149,7 @@ void setup() {
     //Устанавливаем наши значения, определённые ранее в структуре config_radio1
     radio_setSettings(radio1, config_radio1, "1");
 
+    #ifndef SIMPLE_LED
     #ifdef TRANSMITTER   //Если определена работа модуля как передатчика
         
 
@@ -169,6 +170,7 @@ void setup() {
             digitalWrite(FUN, HIGH);
         }
 
+    #endif
     #endif
 
 }
@@ -193,6 +195,7 @@ void loop() {
     WriteColorPixel(COLORS_RGB_LED::black);
     led_test();
     
+    #ifndef SIMPLE_LED
     #ifdef TRANSMITTER   //Если определен как передатчик проверяем, была ли предыдущая передача успешной
         
         // if(operationDone_1) {
@@ -209,6 +212,7 @@ void loop() {
             
         // }
 
+    #endif
     #endif
 
    
