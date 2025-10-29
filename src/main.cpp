@@ -191,9 +191,12 @@ void setup() {
 
 
 void loop() {
-    delay(500);
+    delay(150);
     WriteColorPixel(COLORS_RGB_LED::black);
-    led_test();
+    
+    #ifdef SIMPLE_LED
+        led_test();
+    #endif
     
     #ifndef SIMPLE_LED
     #ifdef TRANSMITTER   //Если определен как передатчик проверяем, была ли предыдущая передача успешной
