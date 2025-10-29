@@ -24,10 +24,28 @@
 #define I2C_SCL1 18
 //*************************************************  END I2C2  ***************************************************/
 
+//*************************************************   GPS   ******************************************************/
+/*
+  No GPS - but free pins are available.
+*/
+//#define HAS_GPS 0
+//#undef GPS_RX_PIN
+//#undef GPS_TX_PIN
+
+//*************************************************  END GPS  *****************************************************/
+
 //*************************************************   BUTTON   ****************************************************/
 // Пін кнопки
 #define BUTTON_PIN 0   
 #define BUTTON_NEED_PULLUP
+//#define BUTTON_ACTIVE_LOW true
+//#define BUTTON_ACTIVE_PULLUP true
+// #define PIN_BUTTON1 47 // 功能键
+// #define PIN_BUTTON2 4  // 电源键
+// #define ALT_BUTTON_PIN PIN_BUTTON2
+// #define ALT_BUTTON_ACTIVE_LOW false
+// #define ALT_BUTTON_ACTIVE_PULLUP false
+// #define EXT_NOTIFY_OUT 22
 
 //*************************************************  END BUTTON  ***************************************************/
 
@@ -68,13 +86,54 @@
 #define USE_RF95
 
 //Піни для управління завданим радіомодемом
+// #define USE_RF95_RFO
 #define RF95_CS LORA_CS
 #define RF95_IRQ LORA_DIO0
 #define RF95_DIO1 LORA_DIO1
 #define RF95_TXEN LORA_TXEN
 #define RF95_RXEN LORA_RXEN
 #define RF95_RESET LORA_RESET
-#define RF95_MAX_POWER 17
+#define RF95_MAX_POWER 20
 
 
 //*************************************************  END SPI   *****************************************************/
+
+
+
+//*************************************************   ADC HELTEC  **************************************************/
+// #define ADC_CTRL 37
+// #define ADC_CTRL_ENABLED LOW
+// #define BATTERY_PIN 1 // A battery voltage measurement pin, voltage divider connected here to measure battery voltage
+// #define ADC_CHANNEL ADC1_GPIO1_CHANNEL
+// #define ADC_ATTENUATION ADC_ATTEN_DB_2_5 // lower dB for high resistance voltage divider
+// #define ADC_MULTIPLIER 4.9 * 1.045
+//*************************************************  END ADC HELTEC  ************************************************/
+
+
+
+//*************************************************   ADC TTGO  ****************************************************/
+// #define BATTERY_PIN 35
+// #define ADC_CHANNEL ADC1_GPIO35_CHANNEL
+// #define BATTERY_SENSE_SAMPLES 30
+// // ratio of voltage divider = 2.0 (R42=100k, R43=100k)
+// #define ADC_MULTIPLIER 2
+//*************************************************  END ADC TTGO  *************************************************/
+
+
+
+//*************************************************   ADC T3 V1.6.1  ***********************************************/
+// #define BATTERY_PIN 35 // A battery voltage measurement pin, voltage divider connected here to measure battery voltage
+// // ratio of voltage divider = 2.0 (R42=100k, R43=100k)
+// #define ADC_MULTIPLIER 2.11 // 2.0 + 10% for correction of display undervoltage.
+// #define ADC_CHANNEL ADC1_GPIO35_CHANNEL
+//*************************************************  END ADC T3 V1.6.1  *********************************************/
+
+
+
+//*************************************************   ADC MESURE  ****************************************************/
+// #define BATTERY_PIN 4
+// #define ADC_CHANNEL ADC1_GPIO4_CHANNEL
+// #define BATTERY_SENSE_SAMPLES 30
+// // ratio of voltage divider = 2.0 (R42=100k, R43=100k)
+// #define ADC_MULTIPLIER 2
+//*************************************************  END ADC TTGO  *************************************************/
